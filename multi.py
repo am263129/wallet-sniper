@@ -23,9 +23,9 @@ while True:
   target = ""
   for address in addresses:
     target +=address+","
-  x = requests.get(f'https://api.bscscan.com/api?module=account&action=balancemulti&address={target[:-1]}&tag=latest&apikey=5T2UVE5AW5P7IUSDJZAPBWDMKRDJW4M6IC')
-  y = requests.get(f'https://api.etherscan.io/api?module=account&action=balancemulti&address={target[:-1]}&tag=latest&apikey=G8Q891T5HH8M34WU1SS5446SMRK9DQHGRY')
-  z = requests.get(f'https://api.polygonscan.com/api?module=account&action=balancemulti&address={target[:-1]}&tag=latest&apikey=CINS4MPBTY4AHDBVGDM3B9W3I6DR3SEYAI')
+  x = requests.get(f'https://api.bscscan.com/api?module=account&action=balancemulti&address={target[:-1]}&tag=latest&apikey=key')
+  y = requests.get(f'https://api.etherscan.io/api?module=account&action=balancemulti&address={target[:-1]}&tag=latest&apikey=key')
+  z = requests.get(f'https://api.polygonscan.com/api?module=account&action=balancemulti&address={target[:-1]}&tag=latest&apikey=key')
   bsc_result = json.loads(x.text)
   eth_result = json.loads(y.text)
   polygon_result = json.loads(z.text)
